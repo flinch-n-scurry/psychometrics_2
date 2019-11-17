@@ -22,13 +22,13 @@ Considering the concepts of observed scores and true scores, *reliability* is th
 
 **$Reliabiliy = Signal/Signal + Noise$**
 
-From this perspective, reliability is stongest when theire is a strong signal and/or little noise. Reliability depends on two things: (1) the extent to which differences in test scores can be attributed to real inter- or intra-individual differencces, and (2) the extent to which differences in test scores are a function of measurement error. In CTT, a person's observed score on a test is a function of that person's true score, plus error. If $Χ$<sub>0</sub> represents a person's observed test score, $X$<sub>t</sub> is the person's true score on the psychological characteristic, and if $X$<sub>e</sub> is the amount of error affecting ther person's responses, then we can write the following formula to represent this assumption:
+From this perspective, reliability is stongest when theire is a strong signal and/or little noise. Reliability depends on two things: (1) the extent to which differences in test scores can be attributed to real inter- or intra-individual differencces, and (2) the extent to which differences in test scores are a function of measurement error. In CTT, a person's observed score on a test is a function of that person's true score, plus error. If $Χ_{o}$ represents a person's observed test score, $X_{t}$ is the person's true score on the psychological characteristic, and if $X_{e}$ is the amount of error affecting ther person's responses, then we can write the following formula to represent this assumption:
 
-$Χ$<sub>0</sub> $=$ $Χ$<sub>t</sub> $+$ $Χ$<sub>e</sub>
+$Χ_{o} = Χ_{t} +Χ_{e}$
 
 Again, the first fundamental assumption of CTT is that observed scores on a psychological measure are determined by respondents' true scores and by measurement error.
 
-CTT makes an iportant assumption about measurement error. Specifically, CTT assumes that error occurs as if it is random. In part, this means that measurement error is just as likely to inflate any particular score as it is to decrease any particular score. We assume that people's responses to a psychological test are affected in unpredictable ways that might make their observed scores artificially high or artificially low. There are two important consequences of this assumption about error. First, error tends to cancel itself out across respondents. In other words, error inflates the scores of some respondents and deflates the scores of other respondents in such a way that the average effect of error across respondents is 0. The second consequence of the apparent randomness of error is that error scores are uncorrelated with true scores. In other words, error affects observed scores in ways that are independent of the respondents' true scores. So, if we compute the correlation between a person's true scores and their error scores, the correlation is exactly 0 (i.e., $r$<sub>te</sub> $= 0$).
+CTT makes an iportant assumption about measurement error. Specifically, CTT assumes that error occurs as if it is random. In part, this means that measurement error is just as likely to inflate any particular score as it is to decrease any particular score. We assume that people's responses to a psychological test are affected in unpredictable ways that might make their observed scores artificially high or artificially low. There are two important consequences of this assumption about error. First, error tends to cancel itself out across respondents. In other words, error inflates the scores of some respondents and deflates the scores of other respondents in such a way that the average effect of error across respondents is 0. The second consequence of the apparent randomness of error is that error scores are uncorrelated with true scores. In other words, error affects observed scores in ways that are independent of the respondents' true scores. So, if we compute the correlation between a person's true scores and their error scores, the correlation is exactly 0 (i.e., $r_{te} = 0$).
 
 #### Variances in observed scores, true scores, and error scores
 
@@ -36,7 +36,7 @@ Reliability reflects the degree to which differences in observed scores are cons
 
 Using the standard formula for variance, we can compute the variance for the observed scores, the variance for the true scores, and the variance for the error scores. Assuming that a person's observed score is the sum of their true score and error score, and that measurement error is random, it follows that the total variance of the observed scores from a group of individuals equals the sum of the true score and error score variances:
 
-$s$<sup>2</sup><sub>o</sub> $=$ $s$<sup>2</sup><sub>t</sub> $+$ $s$<sup>2</sup><sub>e</sub>
+$s^{2}_{o} = s^{2}_{t} + s^{2}_{e}$
 
 **Conclusion: The observed score variance is the sum of the true score variance and the error score variance**.
 
@@ -95,8 +95,69 @@ We note that:
 
 $$ s^{2}_{e}/ s^{2}_{o} $$
 
-represents the proportion of observed score variance that is a function of error variance. When this proportion is small, the reliability is high. In other words, **reliability is high when error varaince is small in comparison with observed score variance**.
+represents the proportion of observed score variance that is a function of error variance. When this proportion is small, the reliability is high. In other words, **reliability is high when error variance is small in comparison with observed score variance**.
 
 For example, when $s^{2}_{e}/ s^{2}_{o} = 0.52,$ 52% of the variance in respondents' observed scores is produced by measurement error, leaving only a remaining 48% attributable to true score differences among the respondents.
 
-<span style="color:blue"> **What would a small degree of error variance indicate?** </span> *It would indicate that the respondents'scores are being affected only sligtlyby measurement error. More specifically, it would indicate that the error affecting one person's score is not very different from the error affecting another perosn's score.*  
+<span style="color:blue"> **What would a small degree of error variance indicate?** </span> *It would indicate that the respondents'scores are being affected only slightly by measurement error. More specifically, it would indicate that the error affecting one person's score is not very different from the error affecting another person's score.*
+
+
+<span style="color:red"> **3. Reliability as the (squared) correlation between observed scores and true scores** </span>
+
+Reliability is the degree to which differences in observed scores are consistent with differences in true scores. Moreover, the correlation coefficient tells us the degree to which differences in one variable are consistent with (i.e., correspond with) differences in another variable. Therefore, reliability can be seen as the (squared) correlation between observed and true scores:
+
+$$ R_{XX} = r^{2}_{ot} $$
+
+The unsquared correlation between observed scores and true scores is sometimes called the "index of reliability". If we square the index of reliability, we get the coefficient of reliability. When people refer to reliability, they are typically referring to the coefficient of reliability ($$ R_{XX} $$).
+
+To gain a better understanding, we can demonstrate algebraically that the squared correlation between the observed scores and true scores ($r^{2}_{ot}$) is equal to the ratio of the true score variance to the observed score variance ($s^{2}_{e}/ s^{2}_{o}$). (The latter is the most common way of conceptualizing the reliability coefficient.)
+
+A correlation is the covariance divided by the product of two standard deviations:
+
+$$ r_{XY} = C_{XY}/s_{X}s_{y} $$
+
+So, the correlation between observed scores and true scores is:
+
+$$ r_{ot} = C_{ot}/s_{o}s_{t} $$
+
+The covariance between observed scores and true scores is:
+
+$$ c_{ot} = \sum(X_{o} - \bar{X}_{o})(X_{t} - \bar{X}_{t})/N $$
+
+We previously saw that $X_{o} = X_{t} + X_{e}$. **Because the mean error score is assumed to be 0, the mean observed score is equal to the mean true score**. This gives us:
+
+$$ c_{ot} = \sum(X_{t} + X_{e} - \bar{X}_{t})(X_{t} - \bar{X}_{t})/N $$
+
+Algebraically simplifying this equation, we see that the covariance between observed scores and true scores is equal to the sum of (1) the variance in true scores and (2) the covariance between true scores and error scores: $c_{ot} = s^{2}_{t}$. However, we've previously assumed that error scores and true scores are independent and thus are not correlated with each other. (i.e. $r_{te} = 0$ and thus also $c_{te} = 0$). So, **the covariance between observed scores and true scores is simply equal to the variance in true scores**: $c_{ot} = s^{2}_{t}$.
+
+Returning to the correlation between true scores and observed scores we have: $r_{ot} = s^{2}/s_{o}s_{t}$. Simplifying this, we find: %r_{ot} = s_{t}/s_{o}. Squaring this, we see that the squared correlation between observed scores and true scores is equal to the ratio of true score variance to observed score variance:
+
+$$ r^{2}_{ot} = s^{2}_{e}/ s^{2}_{o} $$
+
+Therefore, reliability can be seen as the squared correlation between observed scores and true scores.
+-> A reliability of 1 would indicate that the differences among respondents' observed scores are perfectly consistent with the differences among respondents' true scores.
+-> A reliability of 0 would indicate that the differences among respondents' observed tests scores are totally inconsistent with the differences among their true test scores. In this case, the test is completely useless as a measure of a psychological characteristic. In practice, reliability is usually in between these two extremes.
+
+<span style="color:red"> **4. Reliability as the lack of (squared) correlation between observed scores and error scores** </span>
+
+Reliability can also be seen as the degree to which observed scores are uncorrelated with error scores. If differences in observed test scores reflect differences in the effects of error (instead of true scores), then the test is unreliable. So, we can say:
+
+$$ R_{XX} = 1 - r^{2}_{oe} $$
+
+where $r^{2}_{oe}$ is the squared correlation between observed scores and error scores.
+
+We have:
+
+$$ R_{XX} = 1 - r^{2}_{oe} = 1 - (s^{2}_{e}/s^{2}_{o}) $$
+
+From the equation above we can see that if the correlation $r_{oe}$ between observed scores and error scores is 0, then $R_{XX}$ will equal 1. As the correlation between observed scores and error scores increases, the size ir $R_{XX}$ will decrease. Thus, reliability will be relatively strong when observed scores have relatively low correlations with error scores.
+
+#### Reliability and the standard error of measurement
+
+Reliability does not directly reflect the size of measurement error associated with a test. In other words, is doesn't tell us, in test score units, the average size of error scores that we can expect to find when a test is administered to a group of people. The size of measurement error has important implications for interpreting the accuracy of test scores and for computing probablities of scores in testing and research settings.
+
+The standard deviation of error scores is a useful way of expressing the amount of error affecting responses to a test. The standard deviation of error scores is called the **standard error of measurement** ($se_{m}$), and is one of the most important concepts in measurement theory. The standard error of measurement represents the average size of the error scores. **The larger the standard error of measurement, the greater the average difference between observed scores and true scores, and the less reliable the test**. A test's standard error of measurement is closely linked its reliability. In fact, we will need to estimate the $se_{m}$ from an estimate of reliability. We can use reliability to find the standard error if measurement:
+
+$$ se_{m} = s_{o} \sqrt{1-R_{XX}}, $$
+
+where $s_{o}$ is the standard deviation of the observed scores, and $R_{XX}$ is the reliability. The value of $se_{m}$ is equal to the standard deviation that is computed directly from the error scores ($s_{e}$). If $R_{XX} = 1$, then $se_{m} = 0$. That is, if there is no measurement error, then reliability will be perfect. Also, $se_{m}$ can never be larger than $s_{o}$. That is, the standard deviation of error scores will always be less that or equal to the standard deivation of observed scores.
