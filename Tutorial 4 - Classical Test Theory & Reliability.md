@@ -201,3 +201,35 @@ $$ r_{XX} = var(T)/var(T) + var(E) => r_{XX} = var(T)/var(X) $$
 
 -> As the observed score X is often the sum of individual item scores, it is important to first ask whether the items are unidimensional.
 -> We can address this question using **factor analysis**.
+
+In CCT, the focus is on the reliability of the sum or test score. However, assuming unidimensionality of the items, CTT also includes methods of item analysis, i.e., methods to evaluate the quality of the individual items. CTT item analysis methods are based on the relationship (correlation) between the item scores and the sum scores, *and based on the variance and means of the individual items*.
+
+We first consider item-level analyses.
+
+##### A. Evaluating individual items: Item-test and item-rest correlations.
+
+We start CTT item analyses with the correlation between the sum score and the item scores, where the sum score ($x_{i}$) is viewed as a proxy for/approximation of $T_{i}$, the respondent's true score.
+
+**Reminder**: In factor analysis, the factor loadings in single common factor (unidimensional) model can be interpreted as standardized regression coefficients, which equal correlations.
+
+If we compare factor loadings with item-test correlations, we will notice that item-test correlations are larger. This is expected, as the test score also includes the item score, which increases the correlation between the test score and the item score. The solution is to base the test score on all the items except the item we are investigating, i.e. *calculate the test score without the item*. **This is called the item-rest correlation**. The item-rest correlation resembles the factor loading.
+
+**In SPSS, the item-rest correlations are shown in the results of a Reliability Analysis, in the column titled "*Corrected-Item Total Correlation*"**.
+The factor analysis output also includes "communalities", which we interpret as the proportion of explained variance in the regression of the item on the common factor. Remember, in factor analysis the common factor is used as the predictor, and the individual items as dependent variables. We predict the item scores based on the common factor, i.e., the items are regressed on the common factor. Communalities tell us: How much of the variance in the item score is explained by/attributable to the common factor? <span style="color:red"> **By squaring the item-rest correlations, we get the same kind of information. These are interpretable as item-level reliabilities** </span>.
+
+Let X be the test score and item<sub>1</sub> be the item score. We have the CTT model and the definition of reliability:
+
+$$ X_{i} = T_{i} + E_{i} $$
+$$ var(X) = var(T) + var(E) $$
+
+The test reliability is: $var(T)/var(T) + var(E)$
+
+We can apply these definitions to the items. For example:
+
+$$ item_{1i} = T_{item1i} + E_{item1i} and r = var(T_{item1})/var(T_{item1}) + var(E_{item1}) $$
+
+The latter gives us the item reliability of item 1. In a similar way, we can get the item reliability of items2, and so on...
+
+The true score underlying each item is exactly the same: $T_{item1} = T_{item2} = T_{item3}$ etc. Since the items are unidimensional, it follows that each item measures the same undelying variable. So, all the items share the true score, which can be expressed as $T_{item}$. So,we can simplify an item's reliability score as such:
+
+$$ item_{1i} = T_{itemi} + E_{item1i} and r = var(T_{item})/var(T_{item}) + var(E_{item1}) $$
