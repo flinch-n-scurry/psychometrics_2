@@ -161,3 +161,43 @@ The standard deviation of error scores is a useful way of expressing the amount 
 $$ se_{m} = s_{o} \sqrt{1-R_{XX}}, $$
 
 where $s_{o}$ is the standard deviation of the observed scores, and $R_{XX}$ is the reliability. The value of $se_{m}$ is equal to the standard deviation that is computed directly from the error scores ($s_{e}$). If $R_{XX} = 1$, then $se_{m} = 0$. That is, if there is no measurement error, then reliability will be perfect. Also, $se_{m}$ can never be larger than $s_{o}$. That is, the standard deviation of error scores will always be less that or equal to the standard deivation of observed scores.
+
+### Workbook 4 summary
+
+1. Reliability in Classical Test Theory
+2. The evaluation of items in CTT
+3. The relationship between item reliability and test reliability
+4. The evaluation of test reliability based on internal consistency
+5. Uses of test reliability (confidence interval and correction for attenuation)
+
+1. Reliability in CTT
+
+Classical Test Theory (CTT) is about the reliability of test scores. CTT is based on the following equation:
+
+$$ X_{i} = T_{i} + E_{i} $$
+
+Here, $X_{i}$ is the *observed* test score of person i. In psychology, $x_{i}$ is often the sum of person i's item scores, the responses to the items in a test. $T_{i}$ is the *true* score of person i on the test, and $E_{i}$ is the *error* term, reflecting **measurement error**. 
+
+or:
+
+$$ X_{o} = X_{t} + X_{e} $$
+
+(notation varies)
+
+When we administer a psychological test, we consider the variance of the test scores X, $var(X)$ or $σ^{2}_{X}$, as such:
+
+$$ σ^{2}_{X} = σ^{2}_{T} + σ^{2}_{E} $$
+
+or 
+
+$$ var(X) = var(T) + var(E) $$
+
+CTT focuses on estimating the reliability of test scores X, denoted $r_{XX}$. Reliability is defined as the proportion of variance in X ($σ^{2}_{X}$) that is due to/that is attributable to T ($σ^{2}_{T}$):
+
+$$ r_{XX} = σ^{2}_{T} / (σ^{2}_{T} + σ^{2}_{E}) $$
+$$ r_{XX} = var(T)/var(T) + var(E) => r_{XX} = var(T)/var(X) $$
+
+**Note**: $r_{XX}$ depends on two unknowns: $var(T)$ and $var(E)$. However, CTT offers different ways to *estimate* the reliability.
+
+-> As the observed score X is often the sum of individual item scores, it is important to first ask whether the items are unidimensional.
+-> We can address this question using **factor analysis**.
