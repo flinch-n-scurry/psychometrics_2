@@ -1,2 +1,5 @@
-# psychometrics_2
-Methodology &amp; Assessment II (Psychometrics) - Tutor Notes
+# Methodology & Assessment II (Psychometrics II) - Tutor Notes
+
+- Workbook 4:
+  - Classical Test Theory
+  - Reliability analysis
