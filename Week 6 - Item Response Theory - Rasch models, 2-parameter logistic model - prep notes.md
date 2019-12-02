@@ -140,3 +140,61 @@ where $I(θ)$ is the item's information value at a particular trait level ($θ$)
 - For models that include both difficulty and discrimination as item parameters, item information curves can vary in two ways. **First**, as we have seen for the 1PL model, the curves can vary in terms of location. That is they can vary in the trait levels at which their maximal information occurs, as refelcted in the fact that the curves "top out" at different points along the *x*-axis. **Second**, item information curves can also vary in terms of height. That is, they can vary in the amount of information that they provide, as reflected in the fact that the curves "top out" at different points long the *y*-axis.
 
 **In sum**, let's take a moment to consider again the difference between IRT and CTT with regard to test reliability. From a CTT perspective, a test ahs one reliability that can be estimated using an index such as Crobach's coefficient alpha. From an IRT perspective, a test's psychometric quality can vary across trait levels. This is an important but perhaps underappreciated difference between the two approaches to test theory.
+
+### Workgroup 6 - Prep notes
+
+#### Item response theory
+
+- **Item response theory** (IRT) models focus on the relationship between the latent variable and the items in the test that is designed/used to measure that latent variable. In IRT models, the item responses are ordinal. In this workbook, we focus on IRT models for dichotomous items, with item responses coded 0/1.
+- The statistical model used in the application of IRT is the **logistic regression model**, where we regress a dichotomous dependent variable (i.e., the item response) on one or more predictor(s).
+- In IRT models, the the predictor or independent variable is denoted by the Greek letter theta (θ). This is the latent variable that represents the psychological trait that we want to measure. We cannot observe θ directly, but we can observe variables that are assumed to be directly dependent on the latent variable.
+- IRT models are essentially logistic regression models. We assume that ha higher score on θ will be associated with a higher probability of endorsing an item (agreeing with the item, or responding to the item correctly). In terms of the logistic regression model, we have the probability response=1 to an item, conditional on a value of θ.
+
+#### 2PL model
+
+- The 2PL model includes two parameters for each item in the test. So, given M items, we have a set of M logistic regression coefficients, in which the parameters $a_{j}$ and $b_{j}$ determine the shape of the logistic regression line linking θ to the probability of response=1 to item j.
+- In IRT modeling, logistic regression lines are called **Item Chracteristic Curves** (ICCs).
+- **parameter b**: In the 2PL model, parameter b is relatively simple to interpret. It is equal to the value of θ associated with a conditional probability of .5. The parameter b is also called the "difficulty" or "location" paramater. In ICCs, the items may differ with respect to their location on the theta axis. This difference in location is due to the difference in parameter *b*, which is also why this parameter is called the "location parameter".
+- **parameter a**: The second parameter in the 2PL model is the parameter a. The difference between the various item characteristic curves is the slopes of the curves at the value θ=b. The parameter a determines the slope. The larger the value of a, the steeper the slope. The a paramter is called the "discrimination parameter". An item might discriminate better than another item, because a change in θ in the vicinity or b might result in a greater change in the conditional probability (plotted on the y-axis).
+- The larger the discrimination parameter, the better the item discriminates between people who differ in their θ value in the vicinity of θ=b. The larger the discrimination parameter of an item, the larger the resolution of the item. Also, the larger the discrimination parameter of the item, the larger the correlation between the item scores and the latent variable θ. So, generally, the larger the discrimination parameter (*α*), the better the item.
+- In practice, we apply the 2PL model to a set of items, which were designed to measure a give latent variable θ. If we have more than 3 items, we can estimate the location parameters without actually observing θ. This reminds us of the one-factor model, where we estimate the factor loadings of the items without having measured the common factor. As in the factor model, we have to impose a scale on the latent variable. In other words, the latent variable must have a distribution with a given mean and standard deviation. So, we assume normality with mean(θ) = 0 and var(θ) = 1. That is, we assume that θ is standard normally distributed with mean = 0 and standard deviation = 1.
+- We can therefore fit the 2PL model to the responses to K items (K > 3) to obtain estimates of the a and b parameters, and then plot the ICC of each item. Knowing these parameters is important, because they are directly relevant to the resolution of the test.
+
+#### 1PL model
+
+- The 1PL model is a special case of the 2PL model. In the 2PL model the ICC of each of the M items is characterized by two parameters (a and b).
+- In the 1PL (1 paramter logistic model), the *a* parameters are equal for all items.
+- As differences in *a* express differences in slope at $θ = b_{j}$, **the 1PL model implies that the slopes of the items at $θ = b_{j}$ are equal**.
+- One advantage of the 1PL model over the 2PL model is that the 1PL model is more parsimonious, since it has fewer parameters.
+- Given M items, the 2PL model would have 2M parameters, while the 1PL model would have M+1 parameters (a *b* parameter for each item, and one *a* parameter, equal across all items).
+- An additional conceptual advantage is that the ICCs in the 1PL model do not cross. This makes the model easier to interpret. Thus, **in the 1PL model, the differences between the items in terms of the *b* (difficulty) parameters result in consistent differences in the probability of response=1 to the items**.
+
+#### Common factor model vs. 2PL model
+
+The one common factor model strongly resembles the 2PL model.
+
+Specifically, both models:
+1. Relate item scores (dependent variable) to a latent variable (θ or the common factor) using a regression model (linear regression or logistic regression).
+2. Provide information about the correlation between the items and the latent variable (discrimination parameters or factor loadings), and thus allow us to evaluate the quality of individual items as indicators of the latent variable.
+3. Are based on the assumption that the items are unidimensional (the factor model provides more information to evaluate this: the eigenvalues)
+
+However, there are differences:
+1. There are no difficulty parameters in the factor model. These are analogous to the item means.
+2. IRT models and the single common factor model are both unidimensional models. But unidimensionality in EFA can be investigated based on the eigenvalues.
+
+#### Item information curve
+
+- The item information curve and the item characteristic curve are two ways of presenting the same information. So, if we know the ICC, we also know the IIC, and vice versa.
+- A change in θ results in a change in the conditional probability. This change is greater in the case of some items than others. An item discriminates better than another item if the change in θ results in a greater change in the conditional probability of endorsing the item.
+- The discrimination parameter *a* is related to the slope of the ICC at θ = *b*. We can calculate the slope at any value of θ. The slope is maximalat θ = *b*, where b is the location or difficulty parameter.
+- The plot of the slope of the ICCs by the value of theta is called the Item Information Curve (ICC). The ICC and the IIC represent the same information.
+- The item information tells us where on the θ dimension the item discriminates best. So, this is strictly related to the interpretation and the meaning of the discrimination parameter *a*.
+
+- IRT models predict the probability of item response=1. Given response categories 0 and 1, we already know that the probability of item response=1 corresponds to the mean of the item response. We also know that the variance of the responses equal $prob(r=1)*(1-prob(r=1)) = prob(r=1)*prob(r=0)$.
+- So, the item information at a given θ value expresses the expected variance in the item response at that value.
+- The variance of an item can be very low, perhaps because almost everyone provides response=1. If almsot everyone gives response=1, then the item provides little information concerning individual differences. So, at a given value of θ, item information, item discrimination, and item variance all convey the same information. (Note the we evaluate item discrimination as a function of θ).
+
+#### Test information
+
+- Item information concerns the individual item. The IICs show us where each item discriminates best (i.e., has greatest information). But, we may also ask how the test score discriminates as a function of θ. This is important as in practice we use the test scores.
+- **The test information is equal to the sum of the item information**.
